@@ -11,6 +11,7 @@
 
 
 // 第二种写法，一起导出
+// 全局配置
 const config = {
   api_base_url: 'https://www.easy-mock.com/mock/5baee76d23b8f87ee1b5a88f/test/',
   appKey: 'fsdfsdf42434'

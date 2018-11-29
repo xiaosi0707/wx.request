@@ -1,13 +1,15 @@
 import { config, func1 } from '../config.js'
+// 根据返回错误码，给予对应的提示
 const tips = {
   1: '抱歉，出错了',
   1005: 'appkey无效',
   3000: '期刊不存在'
 }
+// 请求类
 class HTTP{
   request (params) {
     if(!params.method) {
-      params.method = 'GET'
+      params.method = 'GET' // 如果没传默认GET
     }
     wx.request({
       url: config.api_base_url + params.url,
@@ -17,7 +19,7 @@ class HTTP{
         'content-type': 'application/json',
         'appkey': config.appKey
       },
-      success: (res) => {
+      success: (res) => { // 成功
         let code = res.statusCode.toString()
         if(code.startsWith('2')) {
           params.success(res.data)
@@ -26,7 +28,7 @@ class HTTP{
           this._show_error(error_code)
         }
       },
-      fail: (err) => {
+      fail: (err) => { // 失败 - 断网...
         this._show_error(1)
       }
     })
@@ -41,4 +43,5 @@ class HTTP{
     })
   }
 }
+// 扔出去
 export { HTTP }
