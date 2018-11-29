@@ -7,7 +7,7 @@ const app = getApp()
 Page({
   onLoad: function() {
     http.request({
-      url: 'classic/latest',
+      url: 'list',
       success: (res) => {
         console.log(res)
       }

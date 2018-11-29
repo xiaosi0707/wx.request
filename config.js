@@ -1,7 +1,7 @@
 // // 第一种写法， 逐个导出
 // export const config = {
-//   api_base_url: 'http://bl.7yue.pro/v1/',
-//   appKey: '5ZbxAY1FmDNQP1T1'
+//   api_base_url: 'https://www.easy-mock.com/mock/5baee76d23b8f87ee1b5a88f/test/',
+//   appKey: 'fdsfwer23434'
 // }
 
 // // 第一种写法，逐个导出
@@ -12,8 +12,8 @@
 
 // 第二种写法，一起导出
 const config = {
-  api_base_url: 'http://bl.7yue.pro/v1/',
-  appKey: '5ZbxAY1FmDNQP1T1'
+  api_base_url: 'https://www.easy-mock.com/mock/5baee76d23b8f87ee1b5a88f/test/',
+  appKey: 'fsdfsdf42434'
 }
 let func1 = function () {
 }
